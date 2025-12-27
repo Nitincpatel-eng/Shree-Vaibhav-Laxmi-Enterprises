@@ -71,7 +71,16 @@ footer{background:var(--blue);color:#fff;text-align:center;padding:15px;margin-t
     <a href="#contact">Contact</a>
   </nav>
 </header><div class="slider" id="home">
-  <div class="slide"></div>
+  <div class="slide" style="background-image:url('https://files.oaiusercontent.com/file- KAtV4B29zJj05z0T56R6f4pL')"></div>
+  <div class="slide" style="background-image:url('https://files.oaiusercontent.com/file- PjV8S4M0zQ2T1L9X6R7N5M4P');animation-delay:4s"></div>
+  <div class="slide" style="background-image:url('https://files.oaiusercontent.com/file- A0B1C2D3E4F5G6H7I8J9K0L1');animation-delay:8s"></div>
+  <div class="slide" style="background-image:url('https://files.oaiusercontent.com/file- Z9Y8X7W6V5U4T3S2R1Q0P908');animation-delay:12s"></div>
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');animation-delay:16s"></div>
+  <div class="slider-content">
+    <h2>Premium Shuttering Contractor</h2>
+    <p>Strong Foundation • Quality Work • On-Time Delivery</p>
+  </div>
+</div>
   <div class="slide"></div>
   <div class="slide"></div>
   <div class="slider-content">
@@ -95,10 +104,10 @@ footer{background:var(--blue);color:#fff;text-align:center;padding:15px;margin-t
 </section><section id="gallery">
   <h2>Project Gallery</h2>
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1590650153855-d9e808231d41" />
-    <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e" />
-    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" />
-    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd" />
+    <img src="https://files.oaiusercontent.com/file- PjV8S4M0zQ2T1L9X6R7N5M4P" />
+    <img src="https://files.oaiusercontent.com/file- A0B1C2D3E4F5G6H7I8J9K0L1" />
+    <img src="https://files.oaiusercontent.com/file- Z9Y8X7W6V5U4T3S2R1Q0P908" />
+    <img src="https://files.oaiusercontent.com/file- KAtV4B29zJj05z0T56R6f4pL" />
   </div>
 </section><section>
   <h2>Client Testimonials</h2>
@@ -110,11 +119,11 @@ footer{background:var(--blue);color:#fff;text-align:center;padding:15px;margin-t
 </section><section id="contact">
   <h2>Inquiry / Quotation</h2>
   <div class="contact-box">
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="tel" placeholder="Mobile Number" required />
-      <input type="text" placeholder="Project Location" />
-      <textarea rows="4" placeholder="Your Requirement"></textarea>
+    <form onsubmit="sendWhatsApp(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="tel" id="mobile" placeholder="Mobile Number" required />
+      <input type="text" id="location" placeholder="Project Location" />
+      <textarea id="requirement" rows="4" placeholder="Your Requirement"></textarea>
       <button type="submit">Send Inquiry</button>
     </form>
     <div>
@@ -126,5 +135,18 @@ footer{background:var(--blue);color:#fff;text-align:center;padding:15px;margin-t
   </div>
 </section><a class="whatsapp" href="https://wa.me/919167004003" target="_blank">💬</a>
 
-<footer>© 2025 Shree Vaibhav Laxmi Enterprises | All Rights Reserved</footer></body>
+<footer>© 2025 Shree Vaibhav Laxmi Enterprises | All Rights Reserved</footer><script>
+function sendWhatsApp(e){
+  e.preventDefault();
+  var name=document.getElementById('name').value;
+  var mobile=document.getElementById('mobile').value;
+  var location=document.getElementById('location').value;
+  var req=document.getElementById('requirement').value;
+
+  var msg=`New Inquiry%0AName: ${name}%0AMobile: ${mobile}%0ALocation: ${location}%0ARequirement: ${req}`;
+
+  window.open(`https://wa.me/919167004003?text=${msg}`,'_blank');
+  window.location.href=`mailto:shreevaibhavlaxmienterprises@com?subject=New Inquiry&body=${msg}`;
+}
+</script></body>
 </html>
